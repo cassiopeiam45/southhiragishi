@@ -1,0 +1,247 @@
+/* グローバルフォント設定 */
+body, header, nav, nav a, section, footer {
+  font-family: "Hiragino Kaku Gothic Pro", "Arial", sans-serif;
+}
+
+/* body */
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  min-height: 100vh;
+  /* 背景画像を固定表示 */
+
+  background: url("../home_background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+.logo img {
+  width: 230px; /* 好きなサイズに */
+  height: auto; /* アスペクト比維持 */
+}
+.greeting-section {
+  background: linear-gradient(135deg, #e0f7fa, #f0ffff); 
+  /* 淡いグラデーション背景。2色変えれば色味を自由に */
+  padding: 60px 20px; 
+  /* 縦横に十分な余白を */
+}
+
+
+
+.tab-icon {
+  display: none; 
+}
+.tab-icon-wrapper:hover .tab-icon {
+  display: inline; 
+}
+.tab-icon {
+  width: 40px;      /* お好みで */
+  height: auto;
+  margin-left: 50px; /* テキストとアイコンの隙間 */
+}
+
+.greeting-inner {
+  max-width: 900px; 
+  margin: 0 auto; 
+  display: flex; 
+  align-items: center; 
+  gap: 40px; 
+  /* カラム間の余白 */
+  background: #ffffffaa; 
+  /* 半透明の白で、背景とカードを重ねる感じ */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 40px;
+}
+
+.greeting-img img {
+  width: 300px; 
+  height: auto; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.greeting-text {
+  flex: 1; 
+  text-align: left;
+}
+
+.greeting-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1em;
+  color: #006064; 
+  /* タイトルカラー */
+}
+
+.greeting-text p {
+  line-height: 1.8;
+  color: #333;
+}
+
+/* header */
+header {
+  background-color: #00ACC1;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 24px;
+}
+
+
+
+/* nav */
+nav {
+  text-align: center;
+  padding: 10px;
+  background-color: #B2EBF2;
+}
+nav a {
+  color: #00796B;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #004D40;
+}
+
+.nav li {
+  position: relative; /* 子要素を絶対配置させるため */
+}
+
+
+/* section 共通 */
+section {
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Googleマップ埋め込み */
+.map {
+  width: 100%;
+  height: 300px;
+}
+
+/* footer */
+footer {
+  background-color: #00ACC1;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* heroセクション */
+.hero {
+  width: 100%;
+  height: 300px;
+  background: url("../title_background.jpg") no-repeat center center / cover;  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.3);
+  margin-bottom: 40px;
+}
+
+/* サイドバー */
+.sidebar {
+  width: 250px;
+  background-color: rgba(224, 247, 250, 0.9);
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+/* ロゴ */
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #006064;
+  margin-bottom: 30px;
+}
+
+/* サイドナビ */
+.nav {
+  list-style: none;
+  padding: 0;
+}
+.nav li {
+  margin-bottom: 12px;
+}
+.nav a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.nav a:hover {
+  background-color: #0097a7;
+}
+
+/* サイドのフッター */
+.footer {
+  margin-top: 40px;
+  font-size: 0.85em;
+  color: #555;
+}
+
+/* メインコンテンツ領域 */
+.main {
+  flex: 1;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* 見出し・表など */
+h1 {
+  color: #008b8b;
+  border-bottom: 2px solid #008b8b;
+  padding-bottom: 0.2em;
+}
+h2 {
+  margin-top: 1.5em;
+  color: #006666;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+th {
+  background-color: #e0f7f7;
+  text-align: left;
+}
+.note {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    box-shadow: none;
+  }
+  .main {
+    padding: 20px;
+  }
+}
